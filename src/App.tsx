@@ -1,9 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import MainLayout from './components/layout'
+import Column from './components/Column/Column'
 
 function App() {
   return (
     <>
-      <div className='bg-red-950'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium quae tempore quo ad impedit eligendi, recusandae dolorum nulla placeat exercitationem amet ipsum eius assumenda sit mollitia distinctio nesciunt eaque.</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainLayout />} >
+            <Route index element={<Column type='feed' />} />
+            <Route path='search' element={<Column type='search' />} />
+          </Route>
+        </Routes>
+
+      </BrowserRouter>
     </>
   )
 }

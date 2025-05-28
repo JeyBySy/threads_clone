@@ -1,1 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif, Helvetica;
+  @apply bg-main text-white;
+}
+
+@theme {
+  --color-main: #0a0a0a;
+  --color-accent: #181818;
+  --color-hover: #1c1c1c;
+  --color-muted: #2d2d2d;
+}
+button {
+  @apply cursor-pointer;
+}
+
+hr {
+  @apply border-muted;
+}
+
+@layer components {
+  main {
+    @apply h-screen w-full grid grid-rows-[auto_1fr] mx-auto;
+  }
+  .main-header {
+    @apply py-5 w-[40rem] max-h-[70px] mx-auto;
+  }
+  .main-content {
+    @apply container w-[80%] lg:w-[40rem] mx-auto h-full bg-accent border border-muted rounded-t-3xl shadow-xl text-center;
+  }
+}
