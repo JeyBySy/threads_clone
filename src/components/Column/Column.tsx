@@ -3,18 +3,26 @@ import SearchPage from "../../pages/ColumnPage/SearchPage";
 
 type Props = {
     type: string
+    feedType?: "for you" | "following"
 }
 
-const Column = ({ type }: Props) => {
+const Column = ({ type, feedType }: Props) => {
     const renderView = () => {
         switch (type) {
             case "feed":
-                return <FeedPage />;
+                return (
+                    <>
+                        {feedType && (
+                            <FeedPage type={feedType} />
+                        )}
+                        {/* <SearchPage /> */}
+                    </>
+                )
             default:
                 return <SearchPage />;
         }
     };
-    return <>{renderView()}</>;
+    return <div className="w-full flex justify-center gap-3">{renderView()}</div>;
 }
 
 export default Column

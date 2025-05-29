@@ -3,8 +3,9 @@ export type PostType = {
   time: string;
   image?:string
   description: string;
-  location: string;
+  location?: string;
   like_count: number;
   comment_count: number;
   repost_count: number;
+  share_count:number
 };

@@ -3,7 +3,7 @@ import { navIcons } from "../../utils/navIcons";
 const AddPost = () => {
     const createIcon = navIcons.find(icon => icon.name === "Create");
     return (
-        <div className='fixed bottom-6 right-6 bg-accent py-5 px-7 border border-muted rounded-xl'>
+        <button className='fixed bottom-6 right-6 bg-accent py-5 px-7 border border-muted rounded-xl'>
             {createIcon && (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@ const AddPost = () => {
                     <path d={createIcon.icon} />
                 </svg>
             )}
-        </div>
+        </button>
     )
 }
 

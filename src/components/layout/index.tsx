@@ -7,7 +7,7 @@ const MainLayout = () => {
         <div className="min-h-screen">
             <div className="grid grid-cols-[1fr] lg:grid-cols-none">
                 <Sidenav />
-                <div className="mx-auto w-full container">
+                <div className="mx-auto w-full flex justify-start">
                     <Outlet />
                 </div>
             </div>

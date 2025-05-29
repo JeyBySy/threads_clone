@@ -9,7 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainLayout />} >
-            <Route index element={<Column type='feed' />} />
+            <Route index element={<Column type='feed' feedType='for you' />} />
+            <Route path='following' element={<Column type='feed' feedType='following' />} />
             <Route path='search' element={<Column type='search' />} />
           </Route>
         </Routes>
