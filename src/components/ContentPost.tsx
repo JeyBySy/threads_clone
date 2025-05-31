@@ -1,5 +1,5 @@
-import { Heart, MessageCircle, Repeat2, Send } from "lucide-react";
 import type { PostType } from "../types/PostTypes"
+import ActionButtons from "./ActionButtons";
 
 type Props = {
     postData: PostType[]
@@ -25,21 +25,7 @@ const ContentPost = ({ postData }: Props) => {
                                 <div className="w-full h-full bg-neutral-400 animate-pulse"></div>
                             </div>
                             <div className="text-xs text-neutral-500 mb-2">{post.location}</div>
-                            <div className="flex gap-1 items-center text-xs text-neutral-600 pb-1">
-                                <button className="flex items-center gap-1 text-white hover:bg-hover rounded-full px-3 py-2 transition">
-                                    <Heart className="w-5 h-5 fill-none stroke-neutral-400 " />
-                                    {post.like_count}
-                                </button>
-                                <button className="flex items-center gap-1 text-white hover:bg-hover rounded-full px-3 py-2 transition">
-                                    <MessageCircle className="w-5 h-5 fill-none stroke-neutral-400 " /> {post.comment_count}
-                                </button>
-                                <button className="flex items-center gap-1 text-white hover:bg-hover rounded-full px-3 py-2 transition">
-                                    <Repeat2 className="w-6 h-6 fill-none stroke-neutral-400" />{post.repost_count}
-                                </button>
-                                <button className="flex items-center gap-1 text-white hover:bg-hover rounded-full px-3 py-2 transition">
-                                    <Send className="w-4.5 h-4.5 fill-none stroke-neutral-400" />{post.share_count}
-                                </button>
-                            </div>
+                            <ActionButtons post={post} />
                         </div>
                     </div>
                 </div>

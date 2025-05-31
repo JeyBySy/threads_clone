@@ -1,3 +1,4 @@
+import Activitypage from "../../pages/ColumnPage/Activitypage";
 import FeedPage from "../../pages/ColumnPage/FeedPage";
 import SearchPage from "../../pages/ColumnPage/SearchPage";
 
@@ -13,11 +14,15 @@ const Column = ({ type, feedType }: Props) => {
                 return (
                     <>
                         {feedType && (
-                            <FeedPage type={feedType} />
+                            <>
+                                <FeedPage type={feedType} />
+                                {/* <SearchPage /> */}
+                            </>
                         )}
-                        {/* <SearchPage /> */}
                     </>
-                )
+                );
+            case 'activity':
+                return <Activitypage />
             default:
                 return <SearchPage />;
         }

@@ -12,6 +12,7 @@ function App() {
             <Route index element={<Column type='feed' feedType='for you' />} />
             <Route path='following' element={<Column type='feed' feedType='following' />} />
             <Route path='search' element={<Column type='search' />} />
+            <Route path='activity' element={<Column type='activity' />} />
           </Route>
         </Routes>
 

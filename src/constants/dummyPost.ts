@@ -11,7 +11,7 @@ export const dummyPost: PostType[] = [
     repost_count: 2,
     share_count: 3,
   },
-  {
+  { 
     name: "Maya Chen",
     time: "30 minutes ago",
     description: "Sunsets by the beach just hit different. 🌅",
