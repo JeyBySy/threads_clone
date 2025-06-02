@@ -70,7 +70,7 @@ const ContentActivity = ({ activityData }: Props) => {
                                         className={`absolute right-0 px-7 py-1.5 font-bold text-[15px] rounded-lg ${item.isFollowed ? 'bg-neutral-600 text-white' : 'bg-white text-main'
                                             }`}
                                     >
-                                        {item.isFollowed ? 'Following' : 'Follow'}
+                                        {item.isFollowed ? 'Follow Back' : 'Follow'}
                                     </button>
 
                                 </div>

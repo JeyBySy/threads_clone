@@ -1,9 +1,8 @@
 import type { PostType } from "../types/PostTypes"
 
-// For You Feed
-export const dummyPost: PostType[] = [
+export const dummyUserPost: PostType[] = [
   {
-    name: "Alex Rivera",
+    name: "j_h_e_r_i_c_o",
     time: "Just now",
     description: "Finally finished my portfolio site! 🚀 Check it out and let me know your thoughts.",
     location: "San Diego, CA",
@@ -13,31 +12,32 @@ export const dummyPost: PostType[] = [
     share_count: 3,
     image:true
   },
-  { 
-    name: "Maya Chen",
+  {
+    name: "j_h_e_r_i_c_o",
     time: "30 minutes ago",
-    description: "Sunsets by the beach just hit different. 🌅",
+    description: "Reposting this sunset shot I took last week 🌅 Needed the reminder to slow down.",
     location: "Santa Monica, CA",
     like_count: 102,
     comment_count: 9,
     repost_count: 3,
     share_count: 6,
-    image:true
+    image:false
   },
   {
-    name: "Ethan Brooks",
+    name: "j_h_e_r_i_c_o",
     time: "1 hour ago",
-    description: "Ran my first 10K today. Feeling sore but accomplished! 💪",
+    description: "Pushed myself to complete a 10K run today. Didn't think I had it in me 😮‍💨💪",
     location: "Austin, TX",
     like_count: 88,
     comment_count: 5,
     repost_count: 1,
     share_count: 2,
+    image:false
   },
   {
-    name: "Layla Hassan",
+    name: "j_h_e_r_i_c_o",
     time: "2 hours ago",
-    description: "This new cafe downtown has the best matcha I've ever had 🍵",
+    description: "Tried this cafe downtown that someone recommended — their matcha is next level 🍵🔥",
     location: "Chicago, IL",
     like_count: 134,
     comment_count: 12,
@@ -46,13 +46,25 @@ export const dummyPost: PostType[] = [
     image:true
   },
   {
-    name: "Noah Kim",
+    name: "j_h_e_r_i_c_o",
     time: "5 hours ago",
-    description: "Studio day. Nothing better than getting lost in your own music. 🎧🎶",
+    description: "Studio vibes.",
     location: "Seattle, WA",
     like_count: 93,
     comment_count: 6,
     repost_count: 3,
     share_count: 4,
+    image:false
+  },
+  {
+    name: "j_h_e_r_i_c_o",
+    time: "1 day ago",
+    description: "Throwback to my old project UI revamp. Still proud of how it turned out 💻✨ #tbt",
+    location: "Remote",
+    like_count: 77,
+    comment_count: 4,
+    repost_count: 2,
+    share_count: 1,
+    image:false
   },
 ]

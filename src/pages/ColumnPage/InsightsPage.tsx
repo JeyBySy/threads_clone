@@ -49,7 +49,7 @@ const InsightsPage = () => {
                     </div>
                     <div className='border-b-1 border-muted'>
                         <p className='text-4xl font-semibold'>1000</p>
-                        <span className='font-semibold'>Total Followers</span>
+                        <span className='font-semibold'>Total followers</span>
                         <div className='w-full h-[350px]'></div>
                     </div>
                     <div className='flex gap-3 items-center'>

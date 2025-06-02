@@ -1,5 +1,5 @@
 import type { PostType } from "../types/PostTypes"
-export const dummyPostFollowing: PostType[] = [
+export const dummyUserRepost: PostType[] = [
     {
         name: "Carlos Mendoza",
         time: "45 minutes ago",
