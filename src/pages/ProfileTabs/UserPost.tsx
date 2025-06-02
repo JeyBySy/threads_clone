@@ -1,4 +1,3 @@
-import React from 'react'
 import ContentPost from '../../components/ContentPost'
 import ContentPostSkeleton from '../../components/Skeleton/ContentPostSkeleton'
 import { dummyPost } from '../../constants/dummyPost'
