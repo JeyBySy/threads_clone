@@ -1,5 +1,7 @@
-import Activitypage from "../../pages/ColumnPage/Activitypage";
+import Activitypage from "../../pages/ColumnPage/ActivityPage";
 import FeedPage from "../../pages/ColumnPage/FeedPage";
+import InsightsPage from "../../pages/ColumnPage/InsightsPage";
+import Profilepage from "../../pages/ColumnPage/ProfilePage";
 import SearchPage from "../../pages/ColumnPage/SearchPage";
 
 type Props = {
@@ -23,6 +25,10 @@ const Column = ({ type, feedType }: Props) => {
                 );
             case 'activity':
                 return <Activitypage />
+            case 'profile':
+                return <Profilepage />
+            case 'insights':
+                return <InsightsPage />
             default:
                 return <SearchPage />;
         }

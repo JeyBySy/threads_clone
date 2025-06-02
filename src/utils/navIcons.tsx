@@ -33,7 +33,7 @@ export const navIcons: NavIcon[] = [
     },
     {
         name: "Profile",
-        linkURL: 'profile',
+        linkURL: '@j_h_e_r_i_c_o',
         viewBox: '4 4 16 10',
         icon: "M12 2C13.6569 2 15 3.34315 15 5C15 6.65685 13.6569 8 12 8C10.3431 8 9 6.65685 9 5C9 3.34315 10.3431 2 12 2ZM12 10C9.33 10 4 11.34 4 14V16H20V14C20 11.34 14.67 10 12 10Z"
     },
