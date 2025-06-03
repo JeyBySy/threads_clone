@@ -4,8 +4,6 @@ import { dummyUserRepost } from "../../constants/dummyUserRepost"
 
 const UserRepost = () => {
     return (
-
-
         <>
             {dummyUserRepost ? (
                 <>

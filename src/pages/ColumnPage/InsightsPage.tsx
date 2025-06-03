@@ -9,7 +9,7 @@ const InsightsPage = () => {
                 onClick: () => console.log('insights clicked')
             }
         ]}>
-            <div className="max-h-[calc(100vh-70px)] overflow-y-scroll pr-4 -mr-4 box-content flex flex-col gap-3">
+            <div className="max-h-[calc(100vh-70px)] w-full overflow-y-scroll pr-4 -mr-4 box-content flex flex-col gap-3">
                 <section className='main-content-insights-section'>
                     <p className='title'>
                         Views

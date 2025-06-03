@@ -5,7 +5,7 @@ import { dummyUserPost } from '../../constants/dummyUserPost'
 const UserPost = () => {
     return (
         <>
-            <div className='px-6 py-4 border-b border-muted w-full flex items-center justify-between'>
+            <div className='px-6 py-4 border-b border-muted flex items-center justify-between'>
                 {/* Image */}
                 <div className='flex gap-3 items-center text-neutral-500 text-[15px]'>
                     <div className="w-9 h-9 bg-green-400 rounded-full" />

@@ -18,7 +18,6 @@ const Column = ({ type, feedType }: Props) => {
                         {feedType && (
                             <>
                                 <FeedPage type={feedType} />
-                                {/* <SearchPage /> */}
                             </>
                         )}
                     </>

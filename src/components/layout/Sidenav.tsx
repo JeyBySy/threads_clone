@@ -1,48 +1,67 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { navIcons } from "../../utils/navIcons";
+import { useEffect, useState } from "react";
 
 const Sidenav = () => {
     const navigation = useNavigate()
+    const location = useLocation()
+    const [activePage, setActivePage] = useState("Threads")
+
+    useEffect(() => {
+        const currentPath = location.pathname.split("/")[1];
+        console.log(currentPath);
+
+        setActivePage(currentPath || ""); // fallback to 'threads' if route is '/'
+    }, [location]);
 
     const handleRedirect = (url: string) => {
         const formatURL = url.toLowerCase()
         navigation(`/${formatURL}`)
     }
     return (
-        <div className="fixed h-screen w-fit overflow-hidden text-wrap grid grid-rows-[auto_1fr_auto]">
+        <div className="hidden md:fixed h-screen w-fit overflow-hidden text-wrap sm:grid grid-rows-[auto_1fr_auto]">
             <div className="py-6 font-bold text-center mb-4">Logo</div>
             <div className="flex flex-col items-center gap-4 py-4 px-2 justify-center">
-                {navIcons.map((item: { name: string; icon: string, viewBox: string, linkURL?: string }, index: number) => (
-                    <div
-                        onClick={() => {
-                            handleRedirect(item?.linkURL || "")
-                        }}
-                        key={index} className={`${item.name === 'Create' && "bg-accent "} flex group hover:bg-accent px-4.5 py-3 rounded-xl flex-col items-center justify-center mx-auto gap-1 cursor-pointer hover:text-zest-500 transition `}>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox={item.viewBox}
-                            className={`
-                                  size-6                             
-                                group-hover:fill-neutral-100 
-                                group-hover:stroke-neutral-100
-                                 ${item.name === 'Create' || item.name === 'Search'
-                                    ? 'fill-neutral-600 stroke-neutral-800 stroke-0'
-                                    : 'fill-neutral-950 stroke-neutral-600'}                               
-                            `}
+                {navIcons.map((item, index) => {
+                    const isActive = activePage === (item.linkURL?.toLowerCase() || "");
 
+                    return (
+                        <div
+                            key={index}
+                            onClick={() => handleRedirect(item?.linkURL || "")}
+                            className={`                               
+                                ${item.name === 'Create' && "bg-accent"} 
+                                hover:bg-accent
+                                flex group px-4.5 py-3 rounded-xl flex-col items-center justify-center mx-auto gap-1 cursor-pointer transition
+                            `}
                         >
-                            <title>{item.name}</title>
-                            <path d={item.icon} />
-                        </svg>
-                    </div>
-                ))}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox={item.viewBox}
+                                className={`
+                                    size-6 
+                                      ${item.name === 'Create' ? "stroke-[1.5] stroke-white/10" : "stroke-[1.5]"} 
+                                    ${isActive
+                                        ? "fill-neutral-100"
+                                        : item.name === "Create" || item.name === "Search"
+                                            ? "fill-neutral-500 stroke-neutral-800"
+                                            : "fill-transparent stroke-neutral-600"
+                                    }
+                                `}
+                            >
+                                <title>{item.name}</title>
+                                <path d={item.icon} />
+                            </svg>
+                        </div>
+                    );
+                })}
             </div>
             <div className="py-9 font-bold text-center">
                 <svg
                     aria-label="More"
                     role="img"
                     viewBox="0 0 24 24"
-                    className="w-full h-6 fill-muted mx-auto cursor-pointer"
+                    className="w-full h-6 fill-muted mx-auto cursor-pointer hover:fill-white transition"
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <title>More</title>

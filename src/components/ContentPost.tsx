@@ -26,16 +26,13 @@ const ContentPost = ({ postData, filter }: Props) => {
                         </div>
                     )}
                     <div className="flex flex-row gap-2 text-sm text-neutral-600 mb-1">
-                        <div>
-                            {/* Image */}
-                            <div className="w-9 h-9 bg-green-400 rounded-full"></div>
-                        </div>
-                        <div className="flex gap-1 w-full items-start flex-col text-start">
+                        <div className="w-9 h-9 bg-green-400 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start text-start w-full">
                             <div className="flex gap-2 items-start">
                                 <span className="font-bold text-white">{post.name}</span>
                                 <span>{post.time}</span>
                             </div>
-                            <p className="text-[15px] text-white mb-2">{post.description}</p>
+                            <div className="text-[15px] text-white pb-2">{post.description}</div>
                             {post?.image && (
                                 <>
                                     <div className="w-full h-[300px]">

@@ -25,24 +25,25 @@ hr {
 
 @layer components {
   main {
-    @apply h-screen  grid grid-rows-[auto_1fr];
+    @apply h-screen grid grid-rows-[auto_1fr];
   }
   .main-header {
     @apply w-[40rem] h-full max-h-[70px] mx-auto;
   }
   .main-content {
-    @apply container w-[80%] lg:w-[40rem] mx-auto h-full bg-accent border border-muted rounded-t-3xl shadow-xl text-center overflow-hidden;
+    @apply container max-w-[640px] w-full lg:w-[40rem] mx-auto h-full bg-accent border border-muted rounded-t-3xl shadow-xl text-center overflow-hidden;
   }
   .main-content-insights {
-    @apply container w-[80%] lg:w-[40rem] mx-auto h-full text-center overflow-hidden;
+    @apply container max-w-[640px] w-full lg:w-[40rem] mx-auto h-full text-center overflow-hidden;
   }
   .main-content-insights-section {
+    @apply bg-accent border border-muted rounded-3xl shadow-xl p-6 text-start space-y-4;
+
     p.title {
       @apply font-black text-xl;
     }
     span {
       @apply text-[15px] text-neutral-500;
     }
-    @apply bg-accent border border-muted rounded-3xl shadow-xl p-6 text-start space-y-4;
   }
 }

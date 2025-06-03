@@ -12,8 +12,6 @@ const ProfilePage = () => {
 
     useEffect(() => {
         const path = location.pathname.split("/").pop()
-        console.log(path);
-
 
         if (!path || path === "@j_h_e_r_i_c_o") {
             setActiveTab("threads")
@@ -30,7 +28,7 @@ const ProfilePage = () => {
                 onClick: () => console.log('Profile clicked'),
             }
         ]}>
-            <div className="max-h-[calc(100vh-70px)] h-full overflow-y-scroll pr-4 -mr-4 box-content">
+            <div className="max-h-[calc(100vh-70px)] h-full overflow-y-scroll pr-4 -mr-4 ">
                 <div className="pt-5 px-6 flex flex-col gap-4.5">
                     <div className="flex justify-between w-full items-center">
                         <div className="flex flex-col text-start">
@@ -67,7 +65,7 @@ const ProfilePage = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex flex-row justify-between text-[15px] mt-1.5 font-semibold">
+                <div className="flex flex-row justify-between text-[15px] mt-1.5 font-semibold">
                     {tabs.map((tab) => (
                         <button
                             key={tab}
@@ -88,7 +86,6 @@ const ProfilePage = () => {
                         </button>
                     ))}
                 </div>
-
                 <Outlet />
             </div>
         </ColumnPage>

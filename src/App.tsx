@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import MainLayout from './components/layout'
+import MainLayout from './components/layout/MainLayout'
 import Column from './components/Column/Column'
 import UserReplies from './pages/ProfileTabs/UserReplies'
 import UserPost from './pages/ProfileTabs/UserPost'
